@@ -33,7 +33,7 @@
                     </li>
                     <li>
                         <a href="javascript: void(0);" class="has-arrow">
-                            <i data-feather="briefcase"></i>
+                            <i class="bx bx bx-list-ul"></i>
                             <span>Data Master</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
