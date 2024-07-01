@@ -69,6 +69,9 @@ $routes->get('data-master-posisi', 'List_posisi::index');
 // travel karyawan
 $routes->get('data-master-karyawan', 'Karyawan::index');
 
+// cargo
+$routes->get('cargo-pemasukan', 'Cargo::show_pemasukan');
+$routes->get('cargo-pengeluaran', 'Cargo::show_pengeluaran');
 
 
 // Dashboard
