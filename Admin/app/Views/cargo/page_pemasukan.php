@@ -353,9 +353,4 @@
 		});
     }
 
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     flatpickr('.datepicker-basic', {
-    //         dateFormat: 'Y-m-d',
-    //     });
-    // });
 </script>

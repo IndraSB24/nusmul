@@ -1,6 +1,12 @@
 
 <script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr('.datepicker-basic', {
+            dateFormat: 'Y-m-d',
+        });
+    });
+
     // swall loader
     function loadQuestionalSwal(
         path, data, title1, title2, text2, modalToHide="", isTableReload=true, isPageReload=false
