@@ -8,6 +8,7 @@
         <?= $this->include('partials/head-css-form-advance') ?>
         <?= $this->include('partials/head-css-datatable') ?>
         <?= $this->include('partials/head-css') ?>
+        <?= $this->include('partials/custom-css') ?>
 
     </head>
 
@@ -292,6 +293,7 @@
         <?= $this->include('partials/vendor-scripts-datatable') ?>
         <?= $this->include('partials/vendor-scripts-form-advance') ?>
         <?= $this->include('partials/vendor-scripts-form-advance') ?>
+        <?= $this->include('partials/custom-script') ?>
 
 
         <script src="assets/js/app.js"></script>
