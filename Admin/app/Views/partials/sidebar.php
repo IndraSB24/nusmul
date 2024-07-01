@@ -71,7 +71,7 @@
                     </li>
                 
                 <!--bus-->
-                <div id="menu-bus" class="default_set_menu menu-bus">
+                <!-- <div id="menu-bus" class="default_set_menu menu-bus"> -->
                     <li class="menu-title" data-key="t-menu">BUS</li>
                     <li>
                         <a href="/">
@@ -117,10 +117,10 @@
                             <li><a href="ui-colors" data-key="t-colors"><?= lang('Files.Colors') ?></a></li>
                         </ul>
                     </li>
-                </div>
+                <!-- </div> -->
                 
                 <!--cargo-->
-                <div id="menu-cargo" class="default_set_menu menu-cargo">
+                <!-- <div id="menu-cargo" class="default_set_menu menu-cargo"> -->
                     <li class="menu-title" data-key="t-menu">CARGO</li>
                     <li>
                         <a href="/">
@@ -140,7 +140,7 @@
                             <span>Pengeluaran</span>
                         </a>
                     </li>
-                </div>
+                <!-- </div> -->
 
             </ul>
         </div>
