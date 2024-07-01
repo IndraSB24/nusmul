@@ -292,7 +292,6 @@
         <?= $this->include('partials/vendor-scripts-sweetalert') ?>
         <?= $this->include('partials/vendor-scripts-datatable') ?>
         <?= $this->include('partials/vendor-scripts-form-advance') ?>
-        <?= $this->include('partials/vendor-scripts-form-advance') ?>
         <?= $this->include('partials/custom-script') ?>
 
         <script src="assets/js/app.js"></script>
