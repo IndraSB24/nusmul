@@ -282,11 +282,10 @@
             </div>
         </div>
 
-
+        <?= $this->include('partials/right-sidebar') ?>
 
         <!-- JAVASCRIPT -->
         <!-- datepicker js -->
-        <script src="<?= base_url('assets/libs/flatpickr/flatpickr.min.js'); ?>"></script>
         <?= $this->include('partials/vendor-scripts') ?>
         <?= $this->include('partials/vendor-scripts-sweetalert') ?>
         <?= $this->include('partials/vendor-scripts-datatable') ?>
@@ -353,9 +352,4 @@
 		});
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        flatpickr('.datepicker-basic', {
-            dateFormat: 'Y-m-d',
-        });
-    });
 </script>

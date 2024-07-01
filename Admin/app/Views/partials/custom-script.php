@@ -1,5 +1,12 @@
+<script src="<?= base_url('assets/libs/flatpickr/flatpickr.min.js'); ?>"></script>
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr('.datepicker-basic', {
+            dateFormat: 'd-m-Y',
+        });
+    });
 
     // swall loader
     function loadQuestionalSwal(
