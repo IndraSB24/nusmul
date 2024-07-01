@@ -146,11 +146,11 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
                                     <label for="for_date" class="form-label">Tanggal</label>
-                                    <input type="text" class="form-control datepicker-basic" id="for_date">
+                                    <input type="text" class="form-control datepicker-basic" id="for_date" placeholder="Tanggal">
                                 </div>
                                 <div class="col-lg-12 mb-3">
                                     <label for="description" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" rows="4" id="description"></textarea>
+                                    <textarea class="form-control" rows="4" id="description" placeholder="Deskripsi"></textarea>
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label for="quantity" class="form-label">Jumlah</label>
