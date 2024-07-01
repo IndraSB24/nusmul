@@ -282,7 +282,7 @@
             </div>
         </div>
 
-
+        <?= $this->include('partials/right-sidebar') ?>
 
         <!-- JAVASCRIPT -->
         <!-- datepicker js -->
