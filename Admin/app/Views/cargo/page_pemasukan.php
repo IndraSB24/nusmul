@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
                                     <label for="for_date" class="form-label">Tanggal</label>
-                                    <input type="text" class="form-control datepicker-basic" id="for_date">
+                                    <input type="text" class="form-control datepicker-basic" id="datepicker-basic">
                                 </div>
                                 <div class="col-lg-8 mb-3">
                                     <label for="hp" class="form-label">No HP</label>
