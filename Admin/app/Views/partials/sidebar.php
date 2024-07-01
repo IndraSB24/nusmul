@@ -18,7 +18,7 @@
                 <!--dashborad-->
                 <li>
                     <a href="/">
-                        <i data-feather="home"></i>
+                    <i class="bx bx-home-circle"></i>
                         <span data-key="t-dashboard">Dashboard</span>
                     </a>
                 </li>
