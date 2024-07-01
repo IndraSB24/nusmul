@@ -40,9 +40,9 @@ class Cargo extends Controller
 			    'li_1' => 'Pemasukan', 
 			    'li_2' => ''
 		    ]),
-            'data_customer' => $this->model_customer->getAllRaw(),
-			'data_provinsi' => $this->model_provinsi->findAll(),
-			'data_kota' => $this->model_kota->getAllRaw()
+            'data_customer' => $this->Model_customer->getAllRaw(),
+			'data_provinsi' => $this->Model_provinsi->findAll(),
+			'data_kota' => $this->Model_kota->getAllRaw()
 		];
         return view('cargo/page_pemasukan', $data);
     }
