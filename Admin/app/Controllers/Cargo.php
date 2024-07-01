@@ -20,7 +20,7 @@ class Cargo extends Controller
         $this->Model_customer = new Model_customer();
         $this->Model_provinsi = new Model_provinsi();
         $this->Model_kota = new Model_kota();
-        // helper(['session_helper', 'formatting_helper']);
+        helper(['session_helper', 'formatting_helper']);
     }
 
     public function index(){
