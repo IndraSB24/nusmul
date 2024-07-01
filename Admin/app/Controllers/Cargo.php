@@ -29,7 +29,11 @@ class Cargo extends Controller
     public function show_pemasukan(){
         $data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Cargo Pemasukan']),
-			'page_title' => view('partials/page-title', ['title' => 'Cargo', 'pagetitle' => 'Pemasukan'])
+			'page_title' => view('partials/page-title', [
+			    'title' => 'Cargo', 
+			    'li_1' => 'Pemasukan', 
+			    'li_2' => ''
+		    ]),
 		];
         return view('cargo/page_pemasukan', $data);
     }
