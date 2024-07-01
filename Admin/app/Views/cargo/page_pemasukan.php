@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="col-lg-2 mb-3">
                                     <label for="unit" class="form-label">Satuan</label>
-                                    <input class="form-control" type="number" id="unit" placeholder="Satuan" />
+                                    <input class="form-control" type="text" id="unit" placeholder="Satuan" />
                                 </div>
                                 <div class="col-lg-6 mb-3">
                                     <label for="total_amount" class="form-label">Harga Total</label>
