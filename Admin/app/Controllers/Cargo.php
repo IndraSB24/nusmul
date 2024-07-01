@@ -6,6 +6,9 @@ use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use App\Models\Model_cargo_pemasukan;
 use App\Models\Model_cargo_pengeluaran;
+use App\Models\Model_customer;
+use App\Models\Model_provinsi;
+use App\Models\Model_kota;
 
 class Cargo extends Controller
 {
@@ -14,6 +17,9 @@ class Cargo extends Controller
     function __construct(){
         $this->Model_cargo_pemasukan = new Model_cargo_pemasukan();
         $this->Model_cargo_pengeluaran = new Model_cargo_pengeluaran();
+        $this->Model_customer = new Model_customer();
+        $this->Model_provinsi = new Model_provinsi();
+        $this->Model_kota = new Model_kota();
         // helper(['session_helper', 'formatting_helper']);
     }
 
@@ -34,6 +40,9 @@ class Cargo extends Controller
 			    'li_1' => 'Pemasukan', 
 			    'li_2' => ''
 		    ]),
+            'data_customer' => $this->model_customer->getAllRaw(),
+			'data_provinsi' => $this->model_provinsi->findAll(),
+			'data_kota' => $this->model_kota->getAllRaw()
 		];
         return view('cargo/page_pemasukan', $data);
     }
