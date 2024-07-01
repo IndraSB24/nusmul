@@ -148,50 +148,17 @@
                                     <label for="for_date" class="form-label">Tanggal</label>
                                     <input type="text" class="form-control datepicker-basic" id="for_date">
                                 </div>
-                                <div class="col-lg-8 mb-3">
-                                    <label for="hp" class="form-label">No HP</label>
-                                    <input class="form-control" type="text" id="hp" name="hp" placeholder="Nomor Hp" />
-                                </div>
-                                <div class="col-lg-4 mb-3">
-                                    <label for="gender" class="form-label">Gender</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender1" value="l" checked>
-                                        <label class="form-check-label" for="gender1">
-                                            Laki-Laki
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender2" value="p">
-                                        <label class="form-check-label" for="gender2">
-                                            Perempuan
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="provinsi" class="form-label">Provinsi</label>
-                                    <select class="form-control" data-trigger name="provinsi" id="provinsi">
-                                        <option value="">Pilih Provinsi</option>
-                                        <?php
-                                            foreach($data_provinsi as $row){
-                                                echo '<option value="'.$row->kode.'"> '.$row->nama.' </option>';
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="kota" class="form-label">Kota</label>
-                                    <select class="form-control" data-trigger name="kota" id="kota">
-                                        <option value="">Pilih Kota</option>
-                                        <?php
-                                            foreach($data_kota as $row){
-                                                echo '<option value="'.$row->kode.'"> '.$row->nama.' ('.$row->nama_provinsi.') </option>';
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
                                 <div class="col-lg-12 mb-3">
-                                    <label for="alamat" class="form-label">Alamat</label>
-                                    <textarea class="form-control" rows="4" name="alamat" id="alamat"></textarea>
+                                    <label for="description" class="form-label">Deskripsi</label>
+                                    <textarea class="form-control" rows="4" id="description"></textarea>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="quantity" class="form-label">Provinsi</label>
+                                    <input class="form-control" type="number" id="quantity" placeholder="Jumlah" />
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="total_amount" class="form-label">Kota</label>
+                                    <input class="form-control" type="number" id="total_amount" placeholder="Harga Total" />
                                 </div>
                             </div>
                             <div class="row">
