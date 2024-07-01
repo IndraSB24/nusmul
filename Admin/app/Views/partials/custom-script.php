@@ -4,7 +4,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         flatpickr('.datepicker-basic', {
-            dateFormat: 'Y-m-d',
+            dateFormat: 'd-m-Y',
         });
     });
 
