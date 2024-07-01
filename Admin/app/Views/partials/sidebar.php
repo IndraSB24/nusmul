@@ -128,8 +128,18 @@
                             <span>Dashboard Cargo</span>
                         </a>
                     </li>
-                    <li><a href="cargo-pemasukan"> Pemasukan </a></li>
-                    <li><a href="cargo-pengeluaran"> Pengeluaran </a></li>
+                    <li>
+                        <a href="cargo-pemasukan"> 
+                            <i data-feather="home"></i>
+                            <span>Pemasukan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cargo-pengeluaran"> 
+                            <i data-feather="home"></i>
+                            <span>Pengeluaran</span>
+                        </a>
+                    </li>
                 </div>
 
             </ul>
