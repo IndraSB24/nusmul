@@ -8,7 +8,6 @@
         <?= $this->include('partials/head-css-form-advance') ?>
         <?= $this->include('partials/head-css-datatable') ?>
         <?= $this->include('partials/head-css') ?>
-        <?= $this->include('partials/custom-css') ?>
 
     </head>
 
@@ -291,7 +290,18 @@
         <?= $this->include('partials/vendor-scripts') ?>
         <?= $this->include('partials/vendor-scripts-sweetalert') ?>
         <?= $this->include('partials/vendor-scripts-datatable') ?>
-        <?= $this->include('partials/vendor-scripts-form-advance') ?>
+        <!-- choices js -->
+        <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+        <!-- color picker js -->
+        <script src="assets/libs/@simonwep/pickr/pickr.min.js"></script>
+        <script src="assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+        <!-- datepicker js -->
+        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+
+        <!-- init js -->
+        <script src="assets/js/pages/form-advanced.init.js"></script>
         <?= $this->include('partials/custom-script') ?>
 
         <script src="assets/js/app.js"></script>
