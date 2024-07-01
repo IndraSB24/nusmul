@@ -1,3 +1,4 @@
+<script src="<?= base_url('assets/libs/flatpickr/flatpickr.min.js'); ?>"></script>
 
 <script>
 
