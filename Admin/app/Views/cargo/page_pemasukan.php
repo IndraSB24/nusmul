@@ -138,15 +138,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h5 class="modal-title text-light" id="myLargeModalLabel">Tambah Customer</h5>
+                        <h5 class="modal-title text-light" id="myLargeModalLabel">Tambah Pemasukan</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="#" id="form_modal_add" method="POST">
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
-                                    <label for="name" class="form-label">Nama</label>
-                                    <input class="form-control" type="text" id="name" name="name" placeholder="Nama Customer" />
+                                    <label for="for_date" class="form-label">Tanggal</label>
+                                    <input type="text" class="form-control datepicker-basic" id="for_date">
                                 </div>
                                 <div class="col-lg-8 mb-3">
                                     <label for="hp" class="form-label">No HP</label>
