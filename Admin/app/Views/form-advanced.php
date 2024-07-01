@@ -396,7 +396,7 @@
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Basic</label>
-                                                <input type="text" class="form-control" id="datepicker-basic">
+                                                <input type="text" class="form-control datepicker-basic" id="datepicker-basic">
                                             </div>
 
                                             <div class="mb-3">
