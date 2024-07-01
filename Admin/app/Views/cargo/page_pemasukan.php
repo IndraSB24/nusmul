@@ -98,7 +98,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                        <table id="main_table" class="table table-bordered dt-responsive nowrap w-100">
                                             <thead>
                                                 <tr class="text-center">
                                                     <th>No</th>
