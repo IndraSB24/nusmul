@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
                                     <label for="for_date" class="form-label">Tanggal</label>
-                                    <input type="text" class="form-control datepicker-basic" id="datepicker-basic">
+                                    <input type="text" class="form-control datepicker-basic" id="for_date">
                                 </div>
                                 <div class="col-lg-8 mb-3">
                                     <label for="hp" class="form-label">No HP</label>
@@ -294,7 +294,6 @@
         <?= $this->include('partials/vendor-scripts-form-advance') ?>
         <?= $this->include('partials/vendor-scripts-form-advance') ?>
         <?= $this->include('partials/custom-script') ?>
-
 
         <script src="assets/js/app.js"></script>
 

@@ -197,7 +197,7 @@ var nanoPickr = Pickr.create({
 
 // flatpickr
 
-flatpickr('#datepicker-basic');
+flatpickr('.datepicker-basic');
 
 flatpickr('#datepicker-datetime', {
   enableTime: true,

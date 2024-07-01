@@ -142,6 +142,14 @@
                     </li>
                 <!-- </div> -->
 
+                <li class="menu-title" data-key="t-menu">ASSETS</li>
+                <li>
+                    <a href="/">
+                        <i data-feather="form-advanced"></i>
+                        <span>Form Advance</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
         <!-- Sidebar -->
