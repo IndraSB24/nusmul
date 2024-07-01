@@ -152,12 +152,16 @@
                                     <label for="description" class="form-label">Deskripsi</label>
                                     <textarea class="form-control" rows="4" id="description"></textarea>
                                 </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="quantity" class="form-label">Provinsi</label>
+                                <div class="col-lg-4 mb-3">
+                                    <label for="quantity" class="form-label">Jumlah</label>
                                     <input class="form-control" type="number" id="quantity" placeholder="Jumlah" />
                                 </div>
+                                <div class="col-lg-2 mb-3">
+                                    <label for="unit" class="form-label">Satuan</label>
+                                    <input class="form-control" type="number" id="unit" placeholder="Satuan" />
+                                </div>
                                 <div class="col-lg-6 mb-3">
-                                    <label for="total_amount" class="form-label">Kota</label>
+                                    <label for="total_amount" class="form-label">Harga Total</label>
                                     <input class="form-control" type="number" id="total_amount" placeholder="Harga Total" />
                                 </div>
                             </div>
