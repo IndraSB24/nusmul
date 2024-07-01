@@ -98,7 +98,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <table id="main_table" class="table table-bordered">
+                                        <table id="main_table" class="table table-bordered nowrap">
                                             <thead>
                                                 <tr class="text-center">
                                                     <th>No</th>
