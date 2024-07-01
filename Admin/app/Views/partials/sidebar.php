@@ -144,8 +144,8 @@
 
                 <li class="menu-title" data-key="t-menu">ASSETS</li>
                 <li>
-                    <a href="/">
-                        <i data-feather="form-advanced"></i>
+                    <a href="form-advanced">
+                        <i data-feather="home"></i>
                         <span>Form Advance</span>
                     </a>
                 </li>
