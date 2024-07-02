@@ -129,7 +129,7 @@ class Cargo extends Controller
         return $this->response->setJSON($output);
     }
 
-    // edit =================================================================================================
+    // add pemasukan 
     public function add_pemasukan(){
         $data = array_intersect_key(
             $this->request->getPost(),
@@ -157,8 +157,17 @@ class Cargo extends Controller
         }
         return $this->response->setJSON($response);
     }
+
+    // ajax get data edit
+    public function ajax_get_pemasukan_data(){
+        $id = $this->request->getPost('id');
+
+        $fetch_edit_data = $this->Model_cargo_pemasukan->get_by_id($id);
+
+        return $this->response->setJSON($fetch_edit_data[0]);
+    }
     
-    // delete ===============================================================================================
+    // delete
     public function delete_item()
     {
         $deleteData = $this->model_item->delete($this->request->getPost('id'));

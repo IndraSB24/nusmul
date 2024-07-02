@@ -183,67 +183,38 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h5 class="modal-title text-light" id="myLargeModalLabel">Edit Data Customer</h5>
+                        <h5 class="modal-title text-light" id="myLargeModalLabel">Edit Data Pemasukan</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="#" id="form_modal_edit" method="POST">
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
-                                    <label for="nama_edit" class="form-label">Nama</label>
-                                    <input class="form-control" type="text" id="nama_edit" name="nama_edit" placeholder="Nama Customer" />
-                                </div>
-                                <div class="col-lg-8 mb-3">
-                                    <label for="hp_edit" class="form-label">No HP</label>
-                                    <input class="form-control" type="text" id="hp_edit" name="hp_edit" placeholder="Nomor Hp" />
-                                </div>
-                                <div class="col-lg-4 mb-3">
-                                    <label for="gender_edit" class="form-label">Gender</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender_edit" id="gender_edit1" value="l" checked>
-                                        <label class="form-check-label" for="gender1">
-                                            Laki-Laki
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender_edit" id="gender_edit2" value="p">
-                                        <label class="form-check-label" for="gender2">
-                                            Perempuan
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="provinsi_edit" class="form-label">Provinsi <span id="provinsi_saat_ini"></span></label>
-                                    <select class="form-control" data-trigger name="provinsi_edit" id="provinsi_edit">
-                                        <option value="">Pilih Provinsi Baru</option>
-                                        <?php
-                                            foreach($data_provinsi as $row){
-                                                echo '<option value="'.$row->kode.'"> '.$row->nama.' </option>';
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="kota_edit" class="form-label">Kota/Kab  <span id="kota_saat_ini"></span></label>
-                                    <select class="form-control" data-trigger name="kota_edit" id="kota_edit">
-                                        <option value="">Pilih Kota Baru</option>
-                                        <?php
-                                            foreach($data_kota as $row){
-                                                echo '<option value="'.$row->kode.'"> '.$row->nama.' ('.$row->nama_provinsi.') </option>';
-                                            }
-                                        ?>
-                                    </select>
+                                    <label for="for_date_edit" class="form-label">Tanggal</label>
+                                    <input type="text" class="form-control datepicker-basic" id="for_date_edit" placeholder="Tanggal">
                                 </div>
                                 <div class="col-lg-12 mb-3">
-                                    <label for="alamat_edit" class="form-label">Alamat</label>
-                                    <textarea class="form-control" rows="4" name="alamat_edit" id="alamat_edit"></textarea>
+                                    <label for="description_edit" class="form-label">Deskripsi</label>
+                                    <textarea class="form-control" rows="4" id="description_edit" placeholder="Deskripsi"></textarea>
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <label for="quantity_edit" class="form-label">Jumlah</label>
+                                    <input class="form-control" type="number" id="quantity_edit" placeholder="Jumlah" />
+                                </div>
+                                <div class="col-lg-2 mb-3">
+                                    <label for="unit_edit" class="form-label">Satuan</label>
+                                    <input class="form-control" type="text" id="unit_edit" placeholder="Satuan" />
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="total_amount_edit" class="form-label">Harga Total</label>
+                                    <input class="form-control" type="number" id="total_amount_edit" placeholder="Harga Total" />
                                 </div>
                             </div>
                             <div class="row">
-                                <input type="hidden" name="id_edit" id="id_edit" />
+                                <input type="hidden" id="id_edit" />
                                 <div class="col-lg-12" style="text-align: right">
-                                    <button type="button" class="btn btn-primary ml-3" id="btn-simpan-edit" data-object="<?= base_url('customer/edit/customer') ?>">
-                                        Simpan
+                                    <button type="button" class="btn btn-primary ml-3" id="btn_konfirmasi_edit">
+                                        Konfirmasi Edit
                                     </button>
                                 </div>
                             </div>
@@ -331,7 +302,6 @@
             for_date: $('#for_date').val(),
             description: $('#description').val(),
             quantity: $('#quantity').val(),
-            alamat: $('#alamat').val(),
             unit: $('#unit').val(),
             amount_per_unit: $('#total_amount').val() / $('#quantity').val()
         };
@@ -340,6 +310,35 @@
             path, data, 'Tambah pemasukan ?', 
             'Ditambahkan!', 'Pemasukan berhasil ditambahkan', 'modal_add'
         );
+    });
+
+    // load edit modal
+    $(document).on('click', '#btn_edit', function() {
+        var idToGet = $(this).data('id');
+        const path = "<?= site_url('cargo/ajax_get_pemasukan_data') ?>";
+        
+        $.ajax({
+            url: path,
+            method: 'POST',
+            data: { id: idToGet },
+            dataType: 'json',
+            success: function(response) {
+                // Populate modal fields with fetched data
+                $('#edit_id').val(idToGet);
+                $('#for_date').val(response.for_date),
+                $('#description').val(response.description),
+                $('#quantity').val(response.quantity),
+                $('#unit').val(response.unit),
+                $('#total_amount').val(response.total_amout);
+                
+                // Show the modal
+                $('#modal_edit').modal('show');
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+                console.error(xhr.responseText);
+            }
+        });
     });
 
 </script>
