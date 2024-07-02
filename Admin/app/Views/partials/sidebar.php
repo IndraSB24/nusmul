@@ -124,7 +124,7 @@
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
                             <li><a href="bus-finance-dashboard"> Dashboard Finance </a></li>
-                            <li><a href="bus-pemasukan" > Pemasuka </a></li>
+                            <li><a href="bus-pemasukan" > Pemasukan </a></li>
                             <li><a href="bus-pengeluaran" > Pengeluaran </a></li>
                         </ul>
                     </li>
