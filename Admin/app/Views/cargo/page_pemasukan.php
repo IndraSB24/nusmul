@@ -189,7 +189,7 @@
                     <div class="modal-body">
                         <form action="#" id="form_modal_edit" method="POST">
                             <div class="row">
-                                <div class="col-lg-12 mb-3 text-center">
+                                <div class="col-lg-12 mb-2 mt-1 text-center">
                                     <h3 id="kode_edit"></h3>
                                 </div>
                                 <div class="col-lg-12 mb-3">
