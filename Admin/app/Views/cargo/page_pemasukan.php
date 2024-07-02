@@ -329,7 +329,7 @@
                 $('#description_edit').val(response.description),
                 $('#quantity_edit').val(response.quantity),
                 $('#unit_edit').val(response.unit),
-                $('#total_amount_edit').val(response.total_amout);
+                $('#total_amount_edit').val(response.total_amount);
                 
                 // Show the modal
                 $('#modal_edit').modal('show');
