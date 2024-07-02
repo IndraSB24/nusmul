@@ -78,10 +78,10 @@ class Cargo extends Controller
             $data[] = [
                 '<span class="text-center">' . ($itung + 1) . '</span>',
                 '<span class="text-center">' . $baris->kode . '</span>',
-                '<span class="text-center">' . $baris->for_date . '</span>',
+                '<span class="text-center">' . indoDate($baris->for_date) . '</span>',
                 '<span class="text-center">' . $baris->description . '</span>',
-                '<span class="text-center">' . $baris->quantity . '</span>',
-                '<span class="text-center">' . $baris->total_amount . '</span>',
+                '<span class="text-center">' . thousand_separator($baris->quantity) . '</span>',
+                '<span class="text-center">Rp. ' . thousand_separator($baris->total_amount) . '</span>',
                 '<span class="text-center">' . $aksi . '</span>'
             ];
         }
@@ -127,51 +127,6 @@ class Cargo extends Controller
 
         // Output to JSON format
         return $this->response->setJSON($output);
-    }
-
-    // add cashdrawer detail =================================================================================
-    public function add_cashdrawer_detail(){
-        $cashDrawerDetail = $this->request->getPost('cashdrawer_detail');
-        $for_date = $this->request->getPost('for_date');
-        
-        if (!empty($cashDrawerDetail) && is_array($cashDrawerDetail)) {
-            foreach ($cashDrawerDetail as $value) {
-                $payload = [
-                    'for_date' =>  $for_date,
-                    'deskripsi' => $value['deskripsi'],
-                    'id_entitas' => 1
-                ];
-
-                if($value['debit'] != 'NaN'){
-                    $payload['jenis'] = 'debit';
-                    $payload['nominal'] = $value['debit'];
-                }
-
-                if($value['credit'] != 'NaN'){
-                    $payload['jenis'] = 'credit';
-                    $payload['nominal'] = $value['credit'];
-                }
-
-                $add_detail = $this->Model_cash_drawer_detail->save($payload);
-
-                if($add_detail){
-                    $isDone = true;
-                }else{
-                    $isDone = false;
-                }
-            }
-        }
-
-        if ($isDone) {
-            $response = [
-                'success' => true
-            ];
-        } else {
-            $response = [
-                'success' => false
-            ];
-        }
-        return $this->response->setJSON($response);
     }
 
     // edit =================================================================================================
