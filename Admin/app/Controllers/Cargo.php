@@ -192,7 +192,7 @@ class Cargo extends Controller
             $item_code_update = [
                 'kode' => generate_general_code('PMS', $insert, 9)
             ];
-            $updateResult = $this->model_item->update($insert, $item_code_update);
+            $updateResult = $this->Model_cargo_pemasukan->update($insert, $item_code_update);
         }
         
         if ($insert) {
