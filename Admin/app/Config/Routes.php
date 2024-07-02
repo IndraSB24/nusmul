@@ -70,6 +70,10 @@ $routes->get('data-master-posisi', 'List_posisi::index');
 $routes->get('data-master-karyawan', 'Karyawan::index');
 
 // bus
+$routes->get('travel-pemasukan', 'Travel::show_pemasukan');
+$routes->get('travel-pengeluaran', 'Travel::show_pengeluaran');
+
+// bus
 $routes->get('bus-pemasukan', 'Bus::show_pemasukan');
 $routes->get('bus-pengeluaran', 'Bus::show_pengeluaran');
 

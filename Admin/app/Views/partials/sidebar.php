@@ -24,8 +24,8 @@
                 </li>
                 
                 <!--travel-->
-                    <li class="menu-title default_set_menu menu-travel" style="display:none">TRAVEL</li>
-                    <li class="default_set_menu menu-travel" style="display:none">
+                    <li class="menu-title" data-key="t-menu">TRAVEL</li>
+                    <li class="default_set_menu menu-travel">
                         <a href="/">
                             <i data-feather="home"></i>
                             <span>Dashboard Travel</span>
@@ -68,6 +68,17 @@
                             <i class="bx bxs-time-five"></i>
                             <span>Travel Scheduling</span>
                         </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow">
+                            <i class="bx bx-happy"></i>
+                            <span>Finance</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="travel-finance-dashboard"> Dashboard Finance </a></li>
+                            <li><a href="travel-pemasukan" > Pemasukan </a></li>
+                            <li><a href="travel-pengeluaran" > Pengeluaran </a></li>
+                        </ul>
                     </li>
                 
                 <!--bus-->
