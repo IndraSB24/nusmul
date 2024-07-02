@@ -325,11 +325,11 @@
             success: function(response) {
                 // Populate modal fields with fetched data
                 $('#edit_id').val(idToGet);
-                $('#for_date').val(response.for_date),
-                $('#description').val(response.description),
-                $('#quantity').val(response.quantity),
-                $('#unit').val(response.unit),
-                $('#total_amount').val(response.total_amout);
+                $('#for_date_edit').val(response.for_date),
+                $('#description_edit').val(response.description),
+                $('#quantity_edit').val(response.quantity),
+                $('#unit_edit').val(response.unit),
+                $('#total_amount_edit').val(response.total_amout);
                 
                 // Show the modal
                 $('#modal_edit').modal('show');
