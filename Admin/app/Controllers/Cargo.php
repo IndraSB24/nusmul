@@ -190,7 +190,7 @@ class Cargo extends Controller
     }
     
     // delete
-    public function delete_item()
+    public function delete_pemasukan()
     {
         $deleteData = $this->Model_cargo_pemasukan->delete($this->request->getPost('id'));
 
