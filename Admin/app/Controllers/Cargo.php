@@ -51,7 +51,14 @@ class Cargo extends Controller
     public function show_pengeluaran(){
         $data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Cargo Pengeluaran']),
-			'page_title' => view('partials/page-title', ['title' => 'Cargo', 'pagetitle' => 'Pengeluaran'])
+			'page_title' => view('partials/page-title', [
+			    'title' => 'Cargo', 
+			    'li_1' => 'Pengeluaran', 
+			    'li_2' => ''
+		    ]),
+            'data_customer' => $this->Model_customer->getAllRaw(),
+			'data_provinsi' => $this->Model_provinsi->findAll(),
+			'data_kota' => $this->Model_kota->getAllRaw()
 		];
         return view('cargo/page_pengeluaran', $data);
     }
