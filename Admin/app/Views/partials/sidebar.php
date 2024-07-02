@@ -124,7 +124,7 @@
                     <li class="menu-title" data-key="t-menu">CARGO</li>
                     <li>
                         <a href="/">
-                            <i class="home"></i>
+                            <i class="bx bx-box"></i>
                             <span>Dashboard Cargo</span>
                         </a>
                     </li>
