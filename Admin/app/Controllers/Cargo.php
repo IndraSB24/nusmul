@@ -70,6 +70,7 @@ class Cargo extends Controller
                 </a>
                 <a class='btn btn-sm btn-danger' id='btn_delete' 
                     data-id='$baris->id'
+                    data-kode='$baris->kode'
                 > 
                     <i class='fas fa-trash-alt'></i>
                 </a>
@@ -191,7 +192,7 @@ class Cargo extends Controller
     // delete
     public function delete_item()
     {
-        $deleteData = $this->model_item->delete($this->request->getPost('id'));
+        $deleteData = $this->Model_cargo_pemasukan->delete($this->request->getPost('id'));
 
         if ($deleteData) {
             $response = ['success' => true];

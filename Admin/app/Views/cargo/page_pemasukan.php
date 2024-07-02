@@ -363,4 +363,18 @@
         );
     });
 
+    // delete
+    $(document).on('click', '#btn_delete', function () {
+        const thisData = $(this).data();
+        const path = "<?= site_url('cargo/delete_pemasukan') ?>";
+        const data = {
+            id : thisData['id']
+        };
+        
+        loadQuestionalSwal(
+            path, data, 'Hapus pemasukan dengan kode: '+thisData['kode']+' ?', 
+            'Dihapus!', 'pemasukan dengan kode: '+thisData['kode']+' berhasil dihapus.', ''
+        );
+    });
+
 </script>
