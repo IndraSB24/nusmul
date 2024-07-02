@@ -158,6 +158,27 @@ class Cargo extends Controller
         return $this->response->setJSON($response);
     }
 
+    // edit pemasukan 
+    public function edit_pemasukan(){
+        $data = array_intersect_key(
+            $this->request->getPost(),
+            array_flip([
+                'description', 'quantity', 'unit', 'amount_per_unit',
+            ])
+        );
+        $data['for_date'] = dbDate($this->request->getPost('for_date'));
+        $data['id'] = $this->request->getPost('id_edit');
+
+        $update = $this->Model_cargo_pemasukan->save($data);
+        
+        if ($update) {
+            $response = ['success' => true];
+        } else {
+            $response = ['success' => false];
+        }
+        return $this->response->setJSON($response);
+    }
+
     // ajax get data edit
     public function ajax_get_pemasukan_data(){
         $id = $this->request->getPost('id');

@@ -189,6 +189,9 @@
                     <div class="modal-body">
                         <form action="#" id="form_modal_edit" method="POST">
                             <div class="row">
+                                <div class="col-lg-12 mb-3 text-center">
+                                    <h3 id="kode_edit"></h3>
+                                </div>
                                 <div class="col-lg-12 mb-3">
                                     <label for="for_date_edit" class="form-label">Tanggal</label>
                                     <input type="text" class="form-control datepicker-basic" id="for_date_edit" placeholder="Tanggal">
@@ -324,13 +327,14 @@
             dataType: 'json',
             success: function(response) {
                 // Populate modal fields with fetched data
-                $('#edit_id').val(idToGet);
-                $('#for_date_edit').val(response.for_date),
-                $('#description_edit').val(response.description),
-                $('#quantity_edit').val(response.quantity),
-                $('#unit_edit').val(response.unit),
-                $('#total_amount_edit').val(response.total_amount);
-                
+                $('#id_edit').val(idToGet)
+                $('#for_date_edit').val(response.for_date)
+                $('#description_edit').val(response.description)
+                $('#quantity_edit').val(response.quantity)
+                $('#unit_edit').val(response.unit)
+                $('#total_amount_edit').val(response.total_amount)
+                $('#kode_edit').text(response.kode)
+               
                 // Show the modal
                 $('#modal_edit').modal('show');
             },
@@ -339,6 +343,24 @@
                 console.error(xhr.responseText);
             }
         });
+    });
+
+    // konfirmasi edit
+    $(document).on('click', '#btn_konfirmasi_edit', function () {
+        const path = "<?= base_url('cargo/edit_pemasukan') ?>";
+        const data = {
+            id_edit : $('#id_edit').val(),
+            for_date: $('#for_date_edit').val(),
+            description: $('#description_edit').val(),
+            quantity: $('#quantity_edit').val(),
+            unit: $('#unit_edit').val(),
+            amount_per_unit: $('#total_amount_edit').val() / $('#quantity_edit').val()
+        };
+        
+        loadQuestionalSwal(
+            path, data, 'Edit pemasukan ?', 
+            'Diedit!', 'Pemasukan berhasil diedit', 'modal_edit'
+        );
     });
 
 </script>
