@@ -279,4 +279,17 @@ class Model_cargo_pemasukan extends Model
         return $this->get()->getResult();
     }
 
+    // insert with db transaction
+    public function insertWithReturnId($data) {
+        $this->db->transBegin();
+
+        $this->db->table($this->table)->insert($data);
+
+        $transactionId = $this->db->insertID();
+
+        $this->db->transCommit();
+
+        return $transactionId;
+    }
+
 }

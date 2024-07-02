@@ -174,4 +174,45 @@ class Cargo extends Controller
         return $this->response->setJSON($response);
     }
 
+    // edit =================================================================================================
+    public function add_pemasukan(){
+        $data = array_intersect_key(
+            $this->request->getPost(),
+            array_flip([
+                'description', 'for_date', 'quantity', 'unit', 'amount_per_unit',
+            ])
+        );
+        $data['created_by'] = activeId();
+
+        $insert = $this->Model_cargo_pemasukan->insertWithReturnId($data);
+
+        if($insert){
+            // inject invoice code
+            $item_code_update = [
+                'kode' => generate_general_code('ITEM', $insert, 9)
+            ];
+            $updateResult = $this->model_item->update($insert, $item_code_update);
+        }
+        
+        if ($insert) {
+            $response = ['success' => true];
+        } else {
+            $response = ['success' => false];
+        }
+        return $this->response->setJSON($response);
+    }
+    
+    // delete ===============================================================================================
+    public function delete_item()
+    {
+        $deleteData = $this->model_item->delete($this->request->getPost('id'));
+
+        if ($deleteData) {
+            $response = ['success' => true];
+        } else {
+            $response = ['success' => false];
+        }
+        return $this->response->setJSON($response);
+    }
+
 }

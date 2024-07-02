@@ -323,4 +323,23 @@
 		});
     }
 
+    // simpan
+    $(document).on('click', '#btn_simpan', function () {
+        const thisData = $(this).data();
+        const path = "<?= base_url('cargo/add_pemasukan') ?>";
+        const data = {
+            for_date: $('#for_date').val(),
+            description: $('#description').val(),
+            quantity: $('#quantity').val(),
+            alamat: $('#alamat').val(),
+            unit: $('#unit').val(),
+            amount_per_unit: $('#total_amount').val() / $('#quantity').val()
+        };
+        
+        loadQuestionalSwal(
+            path, data, 'Tambah pemasukan ?', 
+            'Ditambahkan!', 'Pemasukan berhasil ditambahkan', 'modal_add'
+        );
+    });
+
 </script>
