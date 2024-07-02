@@ -179,9 +179,10 @@ class Cargo extends Controller
         $data = array_intersect_key(
             $this->request->getPost(),
             array_flip([
-                'description', 'for_date', 'quantity', 'unit', 'amount_per_unit',
+                'description', 'quantity', 'unit', 'amount_per_unit',
             ])
         );
+        $data['for_date'] = dbDate($this->request->getPost('for_date'));
         $data['created_by'] = activeId();
 
         $insert = $this->Model_cargo_pemasukan->insertWithReturnId($data);
