@@ -117,6 +117,17 @@
                             <li><a href="ui-colors" data-key="t-colors"><?= lang('Files.Colors') ?></a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow">
+                            <i class="bx bx-happy"></i>
+                            <span>Finance</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="bus-finance-dashboard"> Dashboard Finance </a></li>
+                            <li><a href="bus-pemasukan" > Pemasuka </a></li>
+                            <li><a href="bus-pengeluaran" > Pengeluaran </a></li>
+                        </ul>
+                    </li>
                 <!-- </div> -->
                 
                 <!--cargo-->
