@@ -167,7 +167,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12" style="text-align: right">
-                                    <button type="button" class="btn btn-primary ml-3" id="btn-simpan" data-object="<?= base_url('customer/add/customer') ?>">
+                                    <button type="button" class="btn btn-primary ml-3" id="btn_simpan" >
                                         Simpan
                                     </button>
                                 </div>
