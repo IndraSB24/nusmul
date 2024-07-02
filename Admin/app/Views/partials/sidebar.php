@@ -124,19 +124,19 @@
                     <li class="menu-title" data-key="t-menu">CARGO</li>
                     <li>
                         <a href="/">
-                            <i data-feather="home"></i>
+                            <i class="home"></i>
                             <span>Dashboard Cargo</span>
                         </a>
                     </li>
                     <li>
                         <a href="cargo-pemasukan"> 
-                            <i data-feather="home"></i>
+                            <i class="bx bx-archive-in"></i>
                             <span>Pemasukan</span>
                         </a>
                     </li>
                     <li>
                         <a href="cargo-pengeluaran"> 
-                            <i data-feather="home"></i>
+                            <i class="bx bx-archive-out"></i>
                             <span>Pengeluaran</span>
                         </a>
                     </li>
