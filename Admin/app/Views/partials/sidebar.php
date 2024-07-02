@@ -48,7 +48,7 @@
                     </li>
                     <li>
                         <a href="javascript: void(0);" class="has-arrow">
-                            <i data-feather="briefcase"></i>
+                            <i class="bx bx-happy"></i>
                             <span>CRM</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
@@ -59,13 +59,13 @@
                     </li>
                     <li>
                         <a href="travel-booking">
-                            <i data-feather="home"></i>
+                            <i class="bx bx-car"></i>
                             <span>Travel Booking</span>
                         </a>
                     </li>
                     <li>
                         <a href="travel-scheduling">
-                            <i data-feather="home"></i>
+                            <i class="bx bxs-time-five"></i>
                             <span>Travel Scheduling</span>
                         </a>
                     </li>
