@@ -189,7 +189,7 @@ class Cargo extends Controller
         if($insert){
             // inject invoice code
             $item_code_update = [
-                'kode' => generate_general_code('ITEM', $insert, 9)
+                'kode' => generate_general_code('PMS', $insert, 9)
             ];
             $updateResult = $this->model_item->update($insert, $item_code_update);
         }
