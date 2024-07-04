@@ -14,7 +14,7 @@ class Model_bus_pemasukan extends Model
 
     protected $allowedFields = [
         'kode', 'id_customer', 'id_armada', 'description', 'for_date', 'quantity', 'unit', 'amount_per_unit',
-        'total_amount', 'created_by'
+        'total_amount', 'created_by', 'id_booking'
     ];
 
     protected $useTimestamps = true;

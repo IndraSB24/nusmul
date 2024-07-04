@@ -16,8 +16,7 @@ class Customer extends BaseController
         $this->model_customer = new Model_customer();
         $this->model_provinsi = new Model_provinsi();
         $this->model_kota = new Model_kota();
-        helper('session');
-        helper('formatting');
+        helper(['session_helper', 'formatting_helper']);
     }
     
 	// home ================================================================================================================================================================
@@ -98,7 +97,7 @@ class Customer extends BaseController
                     $insertedID = $this->model_customer->insertID();
                     $updateData = [
                         'id' => $insertedID,
-                        'kode' => generate_customer_code($insertedID),
+                        'kode' => generate_general_code('CNM', $insertedID, 9)
                     ];
                     $this->model_customer->save($updateData);
                     
